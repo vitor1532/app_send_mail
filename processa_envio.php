@@ -1,9 +1,5 @@
 <?php
-	/*
-	private $para = $_POST['para'];
-	private $assunto = $_POST['assunto'];
-	private $mensagem = $_POST['mensagem'];
-	*/
+	
 
 	class Mensagem {
 
@@ -24,7 +20,14 @@
 		}
 
 		public function mensagemValida() {
-			//
+			if(empty($this->para) || empty($this->assunto) || empty($this->mensagem)) {
+
+				return false;
+
+			}
+
+			return true;
+
 		}
 
 	}
@@ -36,5 +39,14 @@
 	$mensagem->__set('mensagem', $_POST['mensagem']);
 
 
-	print_r($mensagem);
+	//print_r($mensagem);
+
+	if($mensagem->mensagemValida()) {
+
+		echo 'Mensagem é válida';
+
+	} else {
+		echo 'mensagem não é válida';
+	}
+
 ?>
