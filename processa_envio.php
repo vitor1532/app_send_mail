@@ -3,7 +3,11 @@
 	require "./biblioteca/phpMailer/Exception.php";
 	require "./biblioteca/phpMailer/OAuth.php";
 	require "./biblioteca/phpMailer/PHPMailer.php";
-	require "./biblioteca/phpMailer/SMTP.php";
+	require "./biblioteca/phpMailer/POP3.php";//recebimento de email
+	require "./biblioteca/phpMailer/SMTP.php";//envio de email
+
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
 
 
 	class Mensagem {
