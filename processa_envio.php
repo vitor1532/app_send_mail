@@ -1,5 +1,10 @@
 <?php
 	
+	require "./biblioteca/phpMailer/Exception.php";
+	require "./biblioteca/phpMailer/OAuth.php";
+	require "./biblioteca/phpMailer/PHPMailer.php";
+	require "./biblioteca/phpMailer/SMTP.php";
+
 
 	class Mensagem {
 
