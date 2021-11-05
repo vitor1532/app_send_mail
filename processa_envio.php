@@ -1,10 +1,10 @@
 <?php
 	
-	require "./biblioteca/phpMailer/Exception.php";
-	require "./biblioteca/phpMailer/OAuth.php";
-	require "./biblioteca/phpMailer/PHPMailer.php";
-	require "./biblioteca/phpMailer/POP3.php";//recebimento de email
-	require "./biblioteca/phpMailer/SMTP.php";//envio de email
+	require "./biblioteca/PHPMailer/Exception.php";
+	require "./biblioteca/PHPMailer/OAuth.php";
+	require "./biblioteca/PHPMailer/PHPMailer.php";
+	require "./biblioteca/PHPMailer/POP3.php";//recebimento de email
+	require "./biblioteca/PHPMailer/SMTP.php";//envio de email
 
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
@@ -29,13 +29,9 @@
 
 		public function mensagemValida() {
 			if(empty($this->para) || empty($this->assunto) || empty($this->mensagem)) {
-
 				return false;
-
 			}
-
 			return true;
-
 		}
 
 	}
