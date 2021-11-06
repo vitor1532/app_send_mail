@@ -42,9 +42,10 @@
 	$mensagem->__set('assunto', $_POST['assunto']);
 	$mensagem->__set('mensagem', $_POST['mensagem']);
 
-
-	//print_r($mensagem);
-
+	echo '<pre>';
+	print_r($mensagem);
+	echo '</pre>';
+	
 	if(!$mensagem->mensagemValida()) {
 
 		echo 'Mensagem é válida';
@@ -68,7 +69,7 @@
 
 	    //Recipients
 	    $mail->setFrom('alcachofrafrederico@gmail.com', 'alcachofra remetente');
-	    $mail->addAddress('alcachofrafrederico@gmail.com', 'alcachofra destinatário');     //Add a recipient
+	    $mail->addAddress($mensagem->__get('para'));     //Add a recipient
 	    //$mail->addReplyTo('alcachofrafrederico@gmail.com', 'Information');
 	    //$mail->addCC('cc@example.com');
 	    //$mail->addBCC('bcc@example.com');
@@ -79,8 +80,8 @@
 
 	    //Content
 	    $mail->isHTML(true);                                  //Set email format to HTML
-	    $mail->Subject = 'Eu sou o assunto';
-	    $mail->Body    = '<strong>Oi, eu sou o conteúdo do email</strong>';
+	    $mail->Subject = $mensagem->__get('assunto');
+	    $mail->Body    = $mensagem->__get('mensagem');
 	    $mail->AltBody = 'eu sou o conteúdo alternativo';
 
 	    $mail->send();
