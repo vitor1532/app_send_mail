@@ -51,7 +51,7 @@
 	if(!$mensagem->mensagemValida()) {
 
 		echo 'Mensagem é válida';
-		die();
+		header('Location: index.php');
 
 	} 
 
