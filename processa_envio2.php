@@ -1,10 +1,6 @@
 <?php
 	//APENAS UM EXEMPLO DO QUE É REQUERIDO PELO PROCESSA_ENVIO.PHP
-	require "./biblioteca/PHPMailer/Exception.php";
-	require "./biblioteca/PHPMailer/OAuth.php";
-	require "./biblioteca/PHPMailer/PHPMailer.php";
-	require "./biblioteca/PHPMailer/POP3.php";//recebimento de email
-	require "./biblioteca/PHPMailer/SMTP.php";//envio de email
+
 
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
