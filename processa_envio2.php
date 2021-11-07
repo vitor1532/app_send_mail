@@ -51,7 +51,7 @@
 	if(!$mensagem->mensagemValida()) {
 
 		echo 'Mensagem é válida';
-		header('Location: index.php');
+		header('Location: index.php?msg=erro');
 
 	} 
 

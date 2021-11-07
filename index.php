@@ -38,6 +38,12 @@
 							</div>
 
 							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+
+							<?if (isset($_GET['msg']) && $_GET['msg'] == 'erro') {?>
+
+								<div class="text-danger">Erro ao enviar mensagem, tente novamente mais tarde.</div>
+
+							<?}?>
 						</form>
 					</div>
 				</div>
