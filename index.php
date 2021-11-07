@@ -12,7 +12,7 @@
 		<div class="container">  
 
 			<div class="py-3 text-center">
-				<img class="d-block mx-auto mb-2" src="logo.jpg" alt="" width="72" height="72">
+				<img class="d-block mx-auto mb-2" src="logo.png" alt="" width="72" height="72">
 				<h2>Send Mail</h2>
 				<p class="lead">Seu app de envio de e-mails particular!</p>
 			</div>
@@ -37,13 +37,15 @@
 								<textarea name="mensagem" class="form-control" id="mensagem"></textarea>
 							</div>
 
-							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
-
 							<?if (isset($_GET['msg']) && $_GET['msg'] == 'erro') {?>
 
-								<div class="text-danger">Erro ao enviar mensagem, tente novamente mais tarde.</div>
+								<div class="text-danger">Ops, parece que voce deixou de preencher um campo! Por favor, preencha todos antes de enviar o e-mail.</div>
 
 							<?}?>
+
+							<button type="submit" class="btn btn-primary btn-lg">Enviar Mensagem</button>
+
+
 						</form>
 					</div>
 				</div>
